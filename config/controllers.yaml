@@ -1,0 +1,21 @@
+roboticarm_hardware_interface:
+  controller:
+    state:
+      type: joint_state_controller/JointStateController
+      publish_rate: 50
+    position:
+      j0:
+        type: position_controllers/JointPositionController
+        joint: j0
+      j1:
+        type: position_controllers/JointPositionController
+        joint: j1
+      j2:
+        type: position_controllers/JointPositionController
+        joint: j2
+      j3:
+        type: position_controllers/JointPositionController
+        joint: j3
+      j4:
+        type: position_controllers/JointPositionController
+        joint: j4

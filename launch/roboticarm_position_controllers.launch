@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<launch>
+    <!-- <rosparam file="$(find roboticarm_hardware_interface)/config/hardware.yaml" command="load"/> -->
+    <rosparam file="$(find roboticarm_hardware_interface)/config/controllers.yaml" command="load"/>
+    <!-- <rosparam file="$(find roboticarm_hardware_interface)/config/joint_limits.yaml" command="load"/> -->
+    
+    <node name="robot_hardware_interface" pkg="roboticarm_hardware_interface" type="robot_hardware_interface" output="screen"/>
+    <!-- <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/> -->
+    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
+        args="
+        	/roboticarm_hardware_controller/state
+            /roboticarm_hardware_controller/j0
+            /roboticarm_hardware_controller/j1
+            /roboticarm_hardware_controller/j2
+            /roboticarm_hardware_controller/j3
+            /roboticarm_hardware_controller/j4
+        "/>
+</launch>
+
+<!-- <?xml version="1.0"?>
+<launch>
+    
+  <rosparam file="$(find roboticarm_hardware_interface)/config/controllers.yaml" command="load"/>
+   
+  <arg name="model" default="$(find three_dof_planar_manipulator)/urdf/three_dof_planar_manipulator.urdf.xacro"/>
+  <arg name="gui" default="true" />
+  
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+  <param name="use_gui" value="$(arg gui)"/>
+
+  <node name="robot_hardware_interface" pkg="three_dof_planar_manipulator" type="robot_hardware_interface" output="screen"/>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" >
+  </node>
+  
+  <node name="rviz" pkg="rviz" type="rviz"/>
+    
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
+        args="
+        	/roboticarm_hardware_controller/state
+            /roboticarm_hardware_controller/j0
+            /roboticarm_hardware_controller/j1
+            /roboticarm_hardware_controller/j2
+            /roboticarm_hardware_controller/j3
+            /roboticarm_hardware_controller/j4
+        "/>
+</launch> -->

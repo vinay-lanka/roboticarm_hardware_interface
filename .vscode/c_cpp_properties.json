@@ -1,0 +1,30 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/vinaylanka/ws_moveit/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_planners/chomp/chomp_motion_planner/include/**",
+        "/home/vinaylanka/ws_moveit/src/geometric_shapes/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_planners/chomp/chomp_interface/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_ros/benchmarks/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_plugins/moveit_ros_control_interface/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_ros/move_group/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_ros/occupancy_map_monitor/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_ros/robot_interaction/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_ros/moveit_servo/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_setup_assistant/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit/moveit_plugins/moveit_simple_controller_manager/include/**",
+        "/home/vinaylanka/ws_moveit/src/moveit_visual_tools/include/**",
+        "/home/vinaylanka/ws_moveit/src/rviz_visual_tools/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
